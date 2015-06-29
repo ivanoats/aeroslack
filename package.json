@@ -19,20 +19,15 @@
   "homepage":"https://bitbucket.org/ivanoats/aeroslack#readme",
   "_virtualApp":{
     "name":"aeroslacker",
-    "dependencies":{
-
-    },
-    "_virtualApp":{
-      "router":[
-        {
-          "module":"webhook",
-          "options":{
-            "url":"env:SLACK_BITBUCKET_SUPPORT_WEBHOOK"
-          },
-          "method":"post",
-          "path":"/slack"
-        }
-      ]
-    }
+    "router":[
+      {
+        "module":"webhook",
+        "options":{
+          "url":"env:SLACK_BITBUCKET_SUPPORT_WEBHOOK"
+        },
+        "method":"post",
+        "path":"/slack"
+      }
+    ]
   }
 }
