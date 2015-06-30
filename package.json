@@ -18,7 +18,6 @@
   "license":"ISC",
   "homepage":"https://bitbucket.org/ivanoats/aeroslack#readme",
   "_virtualApp":{
-    "name":"aeroslacker",
     "router":[
       {
         "module":"webhook",
