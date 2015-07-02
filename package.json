@@ -1,32 +1,36 @@
 {
-  "name":"aeroslacker",
-  "version":"0.0.1",
-  "description":"Demo of using middleware on Aerobatic.com hosted apps",
-  "main":"index.html",
-  "scripts":{
-    "test":"echo \"Error: no test specified\" && exit 1"
+  "name": "aeroslacker",
+  "version": "0.0.1",
+  "description": "Demo of using middleware on Aerobatic.com hosted apps",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/live-server/live-server.js"
   },
-  "repository":{
-    "type":"git",
-    "url":"git+ssh://git@bitbucket.org/ivanoats/aeroslack.git"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/ivanoats/aeroslack.git"
   },
-  "keywords":[
+  "keywords": [
     "aerobatic",
     "slack"
   ],
-  "author":"Ivan Storck",
-  "license":"ISC",
-  "homepage":"https://bitbucket.org/ivanoats/aeroslack#readme",
-  "_virtualApp":{
-    "router":[
+  "author": "Ivan Storck",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ivanoats/aeroslack#readme",
+  "_virtualApp": {
+    "router": [
       {
-        "module":"webhook",
-        "options":{
-          "url":"env:SLACK_BITBUCKET_SUPPORT_WEBHOOK"
+        "module": "webhook",
+        "options": {
+          "url": "env:SLACK_BITBUCKET_SUPPORT_WEBHOOK"
         },
-        "method":"post",
-        "path":"/slack"
+        "method": "post",
+        "path": "/slack"
       }
     ]
+  },
+  "devDependencies": {
+    "live-server": "^0.7.1"
   }
 }
