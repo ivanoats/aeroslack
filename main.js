@@ -24,12 +24,14 @@ ready(function() {
     };
 
     request.onerror = function() {
-      alert('Connection Error with API Endpoint')
+      alert('Connection Error with API Endpoint');
     };
 
     var data = {
-      'text': $('input#email').val() + ' asks: ' + $('input#message').val(),
-        'username': $('input#name').val()
+      'text': document.getElementById('input#email')
+        .val() + ' asks: '
+        + document.getElementById('input#message').val(),
+        'username': document.getElementById('input#name').val()
     };
     request.send(data);
 
