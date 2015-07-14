@@ -25,14 +25,17 @@ ready(function() {
          }
        };
 
-       request.onerror = function() {
-         alert('Connection Error with API Endpoint')
-       };
+    request.onerror = function() {
+      alert('Connection Error with API Endpoint');
+    };
 
-       var data = {
-         'text': $('input#email').val() + ' asks: ' + $('input#message').val(),
-         'username': $('input#name').val()
-       };
-       request.send(data);
-     }, false);
+    var data = {
+      'text': document.getElementById('email')
+        .value + ' asks: '
+        + document.getElementById('message').value,
+        'username': document.getElementById('name').value
+    };
+    request.send(data);
+
+  });
 });
