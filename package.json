@@ -21,12 +21,15 @@
   "_virtualApp": {
     "router": [
       {
-        "module": "webhook",
+        "module": "express-request-proxy",
         "options": {
-          "url": "env:SLACK_BITBUCKET_SUPPORT_WEBHOOK"
+          "url": "https://hooks.slack.com/services/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"
         },
         "method": "post",
         "path": "/slack"
+      },
+      {
+        "module": "webpage"
       }
     ]
   },
