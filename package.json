@@ -23,7 +23,7 @@
       {
         "module": "express-request-proxy",
         "options": {
-          "url": "https://hooks.slack.com/services/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"
+          "url": "env:SLACK_WEBHOOK_URL"
         },
         "method": "post",
         "path": "/slack"
