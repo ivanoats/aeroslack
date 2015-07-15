@@ -11,7 +11,7 @@ ready(function() {
      .addEventListener('submit', function(event) {
        console.log('submitted');
        var request = new XMLHttpRequest();
-       request.open('POST', '/slack', true);
+       request.open('POST', 'https://hooks.slack.com/services/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', true);
        request.setRequestHeader(
          'Content-Type',
          'application/x-www-form-urlencoded; charset=UTF-8'
@@ -33,7 +33,8 @@ ready(function() {
       'text': document.getElementById('email')
         .value + ' asks: '
         + document.getElementById('message').value,
-        'username': document.getElementById('name').value
+      'username': document.getElementById('name').value,
+      'icon_emoji': ':slack:'
     };
     request.send(data);
 
