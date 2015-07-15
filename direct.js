@@ -9,7 +9,6 @@ function ready(fn) {
 ready(function() {
    document.getElementById('slack')
      .addEventListener('submit', function(event) {
-       console.log('submitted');
        var request = new XMLHttpRequest();
        request.open('POST', 'https://hooks.slack.com/services/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', true);
        request.setRequestHeader(
@@ -20,6 +19,7 @@ ready(function() {
        request.onload = function() {
          if (this.status >= 200 && this.status < 400) {
            var data = JSON.parse(this.response);
+           console.log('submitted ok');
          } else {
            alert('Error with API Endpoint\n' + this.repsonse);
          }
