@@ -36,7 +36,7 @@ ready(function() {
       'username': document.getElementById('name').value,
       'icon_emoji': ':slack:'
     };
-    request.send(data);
+    request.send(JSON.stringify(data));
 
   });
 });
