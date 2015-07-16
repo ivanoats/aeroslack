@@ -31,9 +31,7 @@ var processFormData = function() {
 var submitter = function(event) {
   var request = new XMLHttpRequest();
 
-  request.open('POST',
-    '/slack',
-    true);
+  request.open('POST', '/slack', true);
 
   request.setRequestHeader(
     'Content-Type',
