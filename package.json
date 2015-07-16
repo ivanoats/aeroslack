@@ -1,5 +1,5 @@
 {
-  "name": "aeroslacker",
+  "name": "aeroslack",
   "version": "0.0.1",
   "description": "Demo of using middleware on Aerobatic.com hosted apps",
   "main": "index.html",
@@ -31,7 +31,8 @@
       {
         "module": "webpage"
       }
-    ]
+    ],
+    "appId": "41cf8630-522f-4de2-8427-5ac5685a3ca5"
   },
   "devDependencies": {
     "live-server": "^0.7.1"
