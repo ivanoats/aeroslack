@@ -20,11 +20,14 @@ var ajaxError = function() {
 };
 
 var processFormData = function() {
+  var text = document.getElementById('email').value +
+    ' asks ' +
+    document.getElementById('message').value;
+
   return JSON.stringify({
-    'text': document.getElementById('email')
-    .value + ' asks: ' + document.getElementById('message').value,
-    'username': document.getElementById('name').value,
-    'icon_emoji': ':slack:'
+    text: text,
+    username: document.getElementById('name').value,
+    icon_emoji: ':ghost:'
   });
 };
 
@@ -37,7 +40,12 @@ var submitter = function(event) {
 
   request.setRequestHeader(
     'Content-Type',
-    'application/x-www-form-urlencoded; charset=UTF-8'
+    'application/json; charset=UTF-8'
+  );
+
+  request.setRequestHeader(
+    'X-Requested-With',
+    'XMLHttpRequest'
   );
 
   request.onload = checkLoad;
