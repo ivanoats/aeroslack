@@ -1,0 +1,10 @@
+# Aerobatic website manifest
+id: 9eb75f4b-82f2-4110-9ddc-3acc2cf8201c
+appId: 41cf8630-522f-4de2-8427-5ac5685a3ca5
+plugins:
+  - path: /slack
+    method: post
+    options:
+      url: 'env:SLACK_WEBHOOK_URL'
+    name: http-proxy
+  - name: webpage
